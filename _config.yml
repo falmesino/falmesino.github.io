@@ -1,2 +1,12 @@
 name: Falmesino Abdul Hamid Personal Website
+footer-links:
+  github: falmesino
+  twitter: falmesino
+  facebook: falmesinoh
+  youtube: falmesino
+  email: falmesino@gmail.com
+  behance: behance.net/falmesino
 markdown: kramdown
+sass:
+  sass_dir: _scss
+  style: :compressed
