@@ -1,0 +1,8 @@
+---
+published: true
+title: testing
+layout: post
+tags: [test, coba, tinypress]
+categories: [test]
+---
+ngetest, jalan apa nggak pake tinypress
