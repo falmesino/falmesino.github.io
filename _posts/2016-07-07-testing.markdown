@@ -1,8 +1,13 @@
 ---
-published: true
 title: testing
+date: 2016-07-07 00:00:00 Z
+categories:
+- test
+tags:
+- test
+- coba
+- tinypress
 layout: post
-tags: [test, coba, tinypress]
-categories: [test]
 ---
+
 ngetest, jalan apa nggak pake tinypress
