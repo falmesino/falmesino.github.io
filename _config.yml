@@ -29,7 +29,7 @@ disqus:
 google_analytics: 
 url: http://falmesino.github.io
 baseurl: 
-highlighter: pygments
+highlighter: rouge
 permalink: "/:title/"
 version: v1.1.0
 sass:
