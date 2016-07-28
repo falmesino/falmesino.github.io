@@ -28,13 +28,13 @@ footer-links:
 disqus: 
 google_analytics: 
 url: http://falmesino.github.io
-baseurl: ''
+baseurl: 
 markdown: redcarpet
 highlighter: pygments
 permalink: "/:title/"
 version: v1.1.0
 sass:
-  style: :expanded
+  style: expanded
 gems:
 - jekyll-sitemap
 exclude:
