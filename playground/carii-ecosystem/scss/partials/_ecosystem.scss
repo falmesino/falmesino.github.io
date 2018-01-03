@@ -1,0 +1,182 @@
+.ecosystem
+{
+    display: block;
+    position: relative;
+    // border: solid 1px red;
+    
+    &-header,
+    &-content
+    {
+        display: block;
+        position: relative;
+        border: solid 1px $color_grey_300;
+    }
+    
+    &-header
+    {
+        padding: 15px;
+        background: $color_grey_100;
+        border-bottom: none;
+        
+        .form
+        {
+            &-group
+            {
+                margin-bottom: 0;
+            }
+        }
+    }
+    
+    &-content
+    {
+        min-height: 50vh;
+        min-width: 100%;
+        max-width: 100%;
+        width: 100%;
+        background: white; // $color_grey_50;
+    }
+    
+    &-messages
+    {
+        display: block;
+        position: absolute;
+        top: 12px;
+        left: 8px;
+        z-index: 2;
+        margin: 0;
+        padding: 8px 12px;
+        border: solid 1px $color_grey_300;
+        
+        min-width: calc(calc(100% - 20px) - 15vw);
+        max-width: calc(calc(100% - 20px) - 15vw);
+        width: calc(calc(100% - 20px) - 15vw);
+        
+        & > p
+        {
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+            line-height: normal;
+        }
+        
+    }
+    
+    &-controls
+    {
+        display: block;
+        position: absolute;
+        top: 0; //15px;
+        right: 0; //15px;
+        z-index: 2;
+        margin: 0;
+        padding: 0;
+        border: none;// solid 1px $color_grey_300;
+        border-left: solid 1px $color_grey_300;
+        background: $color_grey_50;
+        width: 15vw;
+        min-height: 70%;
+        height: 100%;
+        min-height: 100%;
+        max-height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    &-vis
+    {
+        display: block;
+        position: relative;
+        // border: solid 1px red;
+        width: 100%;
+        min-height: 480px;
+    }
+    
+    &-list
+    {
+        display: block;
+        position: relative;
+        
+        &__item
+        {
+            @include transition(ease, 0.3s);
+            display: block;
+            position: relative;
+            margin: 0 auto;
+            padding: 8px;
+            border-bottom: solid 1px $color_grey_300;
+            background: white;
+            
+            font-size: 0;
+            white-space: nowrap;
+            word-break: keep-all;
+            
+            &:hover,
+            &:active
+            {
+                background: $color_grey_100;
+            }
+            
+            &:last-of-type
+            {
+                border-bottom: none;
+            }
+            
+        }
+            
+        &__image,
+        &__content
+        {
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+
+        &__image
+        {
+            @include fixedSize(72px);
+
+            & > img
+            {
+                display: block;
+                position: relative;
+                margin: 0 auto;
+                padding: 0;
+                border: none;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+        }
+
+        &__content
+        {
+            min-width: calc(100% - 72px);
+            max-width: calc(100% - 72px);
+            width: calc(100% - 72px);
+
+            padding: 0 0 0 8px; //8px;
+            
+            span
+            {
+                display: block;
+                // border: solid 1px red;
+
+                font-size: 12px;
+                line-height: 16px;
+                // white-space: normal;
+                // word-break: normal;
+                
+                & > strong
+                {
+                    font-size: 14px;
+                }
+
+            }
+        }
+        
+    }
+
+}

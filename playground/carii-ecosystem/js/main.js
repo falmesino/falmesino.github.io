@@ -1,0 +1,7 @@
+$(function(){
+   
+    /**
+     * Stuffs to do
+     */
+    
+});

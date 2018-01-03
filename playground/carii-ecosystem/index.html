@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        
+        <title>Carii Eco System</title>
+
+        <!-- Bootstrap -->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css">
+        
+        <link rel="stylesheet" href="./css/style.css">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    
+    <body>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+        
+                    <div class="ecosystem mt48">
+                        <div class="ecosystem-header">
+                            
+                            <div class="row">
+                                <div class="col-xs-8 col-sm-9 col-md-10">
+                                    <div class="form-group">
+                                        <select class="form-control">
+                                            <option value="">Select Eco System</option>
+                                            <option value="1">Eco System #1</option>
+                                            <option value="2">Eco System #2</option>
+                                            <option value="3">Eco System #3</option>
+                                            <option value="add">Add new&hellip;</option>
+                                        </select>
+                                    </div><!--/ .form-group -->
+                                </div><!--/ .col-xs-7 -->
+                                <div class="col-xs-4 col-sm-3 col-md-2">
+                                    <div class="form-group">
+                                        <button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#modalEcosystem">
+                                            <span class="visible-xs"><span class="glyphicon glyphicon-plus"></span></span>
+                                            <span class="hidden-xs"><span class="glyphicon glyphicon-plus"></span> New Eco System</span>
+                                        </button>
+                                    </div><!--/ .form-group -->
+                                </div><!--/ .col-xs-5 -->
+                            </div><!--/ .row -->
+                            
+                        </div><!--/ .ecosystem-header -->
+                        <div class="ecosystem-content">
+
+                            <div class="ecosystem-controls">
+                                
+                                <div class="ecosystem-list">
+                                    
+                                    <a href="#" class="ecosystem-list__item" data-id="1" data-label="Community Name #1">
+                                        <div class="ecosystem-list__image">
+                                            <img src="./img/community-samples/1.png" alt="">
+                                        </div><!--/ .ecosystem-list__image -->
+                                        <div class="ecosystem-list__content">
+                                            <span><strong>Community Name #1</strong></span>
+                                            <span>20 Member(s)</span>
+                                            <span>Wun Fie Loa (DEV)</span>
+                                            <span>Business, Food and Drink</span>
+                                        </div><!--/ .ecosystem-list__content -->
+                                    </a><!--/ .ecosystem-list__item -->
+                                    
+                                    <a href="#" class="ecosystem-list__item" data-id="2" data-label="Community Name #2">
+                                        <div class="ecosystem-list__image">
+                                            <img src="./img/community-samples/2.png" alt="">
+                                        </div><!--/ .ecosystem-list__image -->
+                                        <div class="ecosystem-list__content">
+                                            <span><strong>Community Name #2</strong></span>
+                                            <span>20 Member(s)</span>
+                                            <span>Wun Fie Loa (DEV)</span>
+                                            <span>Business, Food and Drink</span>
+                                        </div><!--/ .ecosystem-list__content -->
+                                    </a><!--/ .ecosystem-list__item -->
+                                    
+                                    <a href="#" class="ecosystem-list__item" data-id="3" data-label="Community Name #3">
+                                        <div class="ecosystem-list__image">
+                                            <img src="./img/community-samples/3.png" alt="">
+                                        </div><!--/ .ecosystem-list__image -->
+                                        <div class="ecosystem-list__content">
+                                            <span><strong>Community Name #3</strong></span>
+                                            <span>5 Member(s)</span>
+                                            <span>Wun Fie Loa (DEV)</span>
+                                            <span>Club</span>
+                                        </div><!--/ .ecosystem-list__content -->
+                                    </a><!--/ .ecosystem-list__item -->
+                                    
+                                    <a href="#" class="ecosystem-list__item" data-id="4" data-label="Community Name #4">
+                                        <div class="ecosystem-list__image">
+                                            <img src="./img/community-samples/4.png" alt="">
+                                        </div><!--/ .ecosystem-list__image -->
+                                        <div class="ecosystem-list__content">
+                                            <span><strong>Community Name #4</strong></span>
+                                            <span>78 Member(s)</span>
+                                            <span>Habeeb Blitzkrieg</span>
+                                            <span>Militarized Organization</span>
+                                        </div><!--/ .ecosystem-list__content -->
+                                    </a><!--/ .ecosystem-list__item -->
+                                    
+                                    <a href="#" class="ecosystem-list__item" data-id="5" data-label="Community Name #5">
+                                        <div class="ecosystem-list__image">
+                                            <img src="./img/community-samples/5.png" alt="">
+                                        </div><!--/ .ecosystem-list__image -->
+                                        <div class="ecosystem-list__content">
+                                            <span><strong>Community Name #5</strong></span>
+                                            <span>4 Member(s)</span>
+                                            <span>Jeff's Step Mother</span>
+                                            <span>Music</span>
+                                        </div><!--/ .ecosystem-list__content -->
+                                    </a><!--/ .ecosystem-list__item -->
+                                    
+                                    <a href="#" class="ecosystem-list__item" data-id="6" data-label="Community Name #6">
+                                        <div class="ecosystem-list__image">
+                                            <img src="./img/community-samples/6.png" alt="">
+                                        </div><!--/ .ecosystem-list__image -->
+                                        <div class="ecosystem-list__content">
+                                            <span><strong>Community Name #6</strong></span>
+                                            <span>4 Member(s)</span>
+                                            <span>Jeff's Step Mother</span>
+                                            <span>Music</span>
+                                        </div><!--/ .ecosystem-list__content -->
+                                    </a><!--/ .ecosystem-list__item -->
+                                    
+                                </div><!--/ .ecosystem-list -->
+                                
+                            </div><!--/ .ecosystem-controls -->
+                            
+                            <div class="ecosystem-vis" id="ecosystem-vis"></div>
+                            
+                        </div><!--/ .ecosystem-content -->
+                        
+                    </div><!--/ .ecosystem -->
+                    
+                </div><!--/ .col-xs-12 -->
+            </div><!--/ .row -->
+            <div class="row">
+                <div class="col-xs-12">
+                    <div id="ecosystem-msg">Hi, there!</div>
+                </div><!--/ .col-xs-12 -->
+            </div><!--/ .row -->
+        </div><!--/ .container -->
+        
+        <!-- Modal -->
+        <div class="modal fade" id="modalEcosystem" tabindex="-1" role="dialog" aria-labelledby="modalEcosystemLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="modalEcosystemLabel">Create New Ecosystem</h4>
+                    </div><!--/ .modal-header -->
+                    <div class="modal-body">
+                        <form role="form">
+                            <div class="form-group">
+                                <label>Ecosystem Name</label>
+                                <input type="text" class="form-control" required tabindex="1" placeholder="Ecosystem Name">
+                            </div><!--/ .form-group -->
+                        </form>
+                    </div><!--/ .modal-body -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Create</button>
+                    </div><!--/ .modal-footer -->
+                </div><!--/ .modal-content -->
+            </div><!--/ .modal-dialog -->
+        </div><!--/ .modal -->
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <!-- vis.js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+        
+        <script>
+            
+            $(function(){
+                
+                /**
+                 * http://visjs.org/docs/network/
+                 * 
+                 * TO-DO
+                 * 1. Dynamic Data => http://visjs.org/examples/network/data/dynamicData.html
+                 */
+
+                var nodes = null;
+                var edges = null;
+                var network = null;
+                var imgDir = './img/community-samples/';
+                var imgBroken = imgDir + '9.png';
+
+                 // create an array with nodes
+                nodes = new vis.DataSet([
+                    {id: 1, shape: 'image', image: imgDir + '1.png', brokenImage: imgBroken, label: 'Community Name #1'},
+                    {id: 2, shape: 'image', image: imgDir + '2.png', brokenImage: imgBroken, label: 'Community Name #2'},
+                    {id: 3, shape: 'image', image: imgDir + '3.png', brokenImage: imgBroken, label: 'Community Name #3'},
+                    {id: 4, shape: 'image', image: imgDir + '4.png', brokenImage: imgBroken, label: 'Community Name #4'},
+                    {id: 5, shape: 'image', image: imgDir + '5.png', brokenImage: imgBroken, label: 'Community Name #5'}
+                ]);
+
+                // create an array with edges
+                edges = new vis.DataSet([
+                    {from: 1, to: 3},
+                    {from: 1, to: 2},
+                    {from: 2, to: 4},
+                    {from: 2, to: 5}
+                ]);
+
+                // create a network
+                var container = document.getElementById('ecosystem-vis');
+
+                // provide the data in the vis format
+                var data = {
+                    nodes: nodes,
+                    edges: edges
+                };
+
+                var options = {
+                    autoResize: true,
+                    height: '480px',
+                    width: '100%',
+                    nodes: {
+                        borderWidth: 4,
+                        size: 30,
+                        color: {
+                            border: '#616161',
+                            background: '#bdbdbd'
+                        },
+                        font:{
+                            color: '#212121'
+                        },
+                        shapeProperties: {
+                            useBorderWithImage:true
+                        }
+                    },
+                    edges: {
+                        color: 'lightgray'
+                    },
+                    interaction:{hover:true},
+                    manipulation: {
+                        enabled: true
+                    }
+                };
+
+                // initialize your network!
+                network = new vis.Network(container, data, options);
+
+                // animate the intro
+                network.once("beforeDrawing", function() {
+                    network.focus(2, {
+                        scale: 12
+                    });
+                });
+
+                network.once("afterDrawing", function() {
+                    network.fit({
+                        animation: {
+                            duration: 3000,
+                            easingFunction: 'easeInOutQuad'
+                        }
+                    });
+                });
+
+                /**
+                 * CRUD
+                 */
+
+                function addNode(){
+                    try{
+
+                    }
+                    catch(err){
+                        alert(err);
+                    }
+                }
+
+                function updateNode(){
+                    try{
+
+                    }
+                    catch(err){
+                        alert(err);
+                    }
+                }
+
+                function removeNode(){
+                    try{
+
+                    }
+                    catch(err){
+                        alert(err);
+                    }
+                }
+
+                function addEdge(){
+                    try{
+
+                    }
+                    catch(err){
+                        alert(err);
+                    }
+                }
+
+                function updateEdge(){
+                    try{
+
+                    }
+                    catch(err){
+                        alert(err);
+                    }
+                }
+
+                function removeEdge(){
+                    try{
+
+                    }
+                    catch(err){
+                        alert(err);
+                    }
+                }
+                
+                $('.ecosystem-list__item').each(function(index, value){
+                    var el = $(this);
+                    el.click(function(e){
+                        e.preventDefault();
+                        var dataId = $(this).attr('data-id');
+                        var dataLabel = $(this).attr('data-label');
+                        var dataImage = $(this).find('.ecosystem-list__image').find('img').attr('src');
+                        console.log($(this).find('.ecosystem-list__image'));
+                        alert(dataId + ' - ' + dataLabel + ' - ' + src);
+                        return false;
+                    });
+                });
+
+                /**
+                 * Events
+                 */
+
+                var ecoMsg = document.getElementById('ecosystem-msg');
+
+                network.on("click", function (params) {
+                    params.event = "[original event]";
+                    ecoMsg.innerHTML = '<strong>Click event:</strong>' + JSON.stringify(params, null, 4);
+                    console.log('click event, getNodeAt returns: ' + this.getNodeAt(params.pointer.DOM));
+                });
+                network.on("doubleClick", function (params) {
+                    params.event = "[original event]";
+                    document.getElementById('eventSpan').innerHTML = '<strong>doubleClick event:</strong>' + JSON.stringify(params, null, 4);
+                });
+                network.on("oncontext", function (params) {
+                    params.event = "[original event]";
+                    ecoMsg.innerHTML = '<strong>oncontext (right click) event:</strong>' + JSON.stringify(params, null, 4);
+                });
+                network.on("dragStart", function (params) {
+                    // There's no point in displaying this event on screen, it gets immediately overwritten
+                    params.event = "[original event]";
+                    console.log('dragStart Event:', params);
+                    console.log('dragStart event, getNodeAt returns: ' + this.getNodeAt(params.pointer.DOM));
+                });
+                network.on("dragging", function (params) {
+                    params.event = "[original event]";
+                    ecoMsg.innerHTML = '<strong>dragging event:</strong>' + JSON.stringify(params, null, 4);
+                });
+                network.on("dragEnd", function (params) {
+                    params.event = "[original event]";
+                    ecoMsg.innerHTML = '<strong>dragEnd event:</strong>' + JSON.stringify(params, null, 4);
+                    console.log('dragEnd Event:', params);
+                    console.log('dragEnd event, getNodeAt returns: ' + this.getNodeAt(params.pointer.DOM));
+                });
+
+
+                network.on("hidePopup", function () {
+                    console.log('hidePopup Event');
+                });
+                network.on("select", function (params) {
+                    console.log('select Event:', params);
+                });
+                network.on("selectNode", function (params) {
+                    console.log('selectNode Event:', params);
+                });
+                network.on("selectEdge", function (params) {
+                    console.log('selectEdge Event:', params);
+                });
+                network.on("deselectNode", function (params) {
+                    console.log('deselectNode Event:', params);
+                });
+                network.on("deselectEdge", function (params) {
+                    console.log('deselectEdge Event:', params);
+                });
+                network.on("hoverNode", function (params) {
+                    console.log('hoverNode Event:', params);
+                });
+                network.on("hoverEdge", function (params) {
+                    console.log('hoverEdge Event:', params);
+                });
+                network.on("blurNode", function (params) {
+                    console.log('blurNode Event:', params);
+                });
+                network.on("blurEdge", function (params) {
+                    console.log('blurEdge Event:', params);
+                });
+            
+                
+            });
+            
+        </script>
+        
+        <!-- Our custom script -->
+        <script src="./js/main.js"></script>
+        
+    </body>
+    
+</html>
