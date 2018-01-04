@@ -127,12 +127,24 @@ $(function(){
                 var confirmDelete = confirm('Remove ' + dataLabel + ' from this ecosystem?');
                 if(confirmDelete){
                     try{
+                        
+                        // http://visjs.org/docs/network/
+                        /*
+                        network.unselectAll();
+                        
+                        network.setSelection({
+                            nodes: [dataId]
+                        });
+                        
+                        */
                         nodes.remove({
                             id: dataId
                         });
+                        /*
                         edges.remove({
                             id: dataId
                         });
+                        */
                         el.stop().toggleClass('ecosystem-list__item--active');
                     }
                     catch (err) {
