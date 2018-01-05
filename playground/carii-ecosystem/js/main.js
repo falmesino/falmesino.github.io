@@ -12,6 +12,24 @@ $(function(){
     var network = null;
     var imgDir = './img/community-samples/';
     var imgBroken = imgDir + '9.png';
+    
+    var locales = {
+      en: {
+        edit: 'Edit',
+        del: 'Delete selected',
+        back: 'Back',
+        addNode: 'Add Node',
+        addEdge: 'Add Connection',
+        editNode: 'Edit Node',
+        editEdge: 'Edit Connection',
+        addDescription: 'Click in an empty space to place a new node.',
+        edgeDescription: 'Click on a node and drag the connecting line to another community to connect them.',
+        editEdgeDescription: 'Click on the control points and drag them to a community to connect to it.',
+        createEdgeError: 'Cannot link to a cluster.',
+        deleteClusterError: 'Clusters cannot be deleted.',
+        editClusterError: 'Clusters cannot be edited.'
+      }
+    }
 
      // create an array with nodes
     nodes = new vis.DataSet([
@@ -47,6 +65,7 @@ $(function(){
         autoResize: true,
         height: '480px',
         width: '100%',
+        locales: locales,
         nodes: {
             borderWidth: 4,
             size: 30,
@@ -70,13 +89,8 @@ $(function(){
         },
         manipulation: {
             enabled: true,
-            initiallyActive: true
-            /*,
-            deleteNode: function(nodeData, callback){
-                console.log(nodeData);
-                console.log(callback);
-                console.log(console.log('deleteNode'));
-            }*/
+            initiallyActive: true,
+            addNode: false
         }
     };
 
@@ -129,21 +143,26 @@ $(function(){
                     try{
                         
                         // http://visjs.org/docs/network/
-                        /*
-                        network.unselectAll();
                         
-                        network.setSelection({
-                            nodes: [dataId]
-                        });
+                        var selectedNodes = network.getSelectedNodes();
+                        var selectedEdges = network.getSelectedEdges();
+                        var connectedNodes = network.getConnectedNodes(dataId);
                         
-                        */
-                        nodes.remove({
-                            id: dataId
-                        });
+                        network.selectNodes(dataId, true);
+                        network.deleteSelected();
+                        
                         /*
-                        edges.remove({
-                            id: dataId
-                        });
+                        console.log('getSelectedNodes()');
+                        console.log(selectedNodes);
+                        
+                        console.log('getSelectedEdges()');
+                        console.log(selectedEdges);
+                        
+                        console.log('getConnectedNodes()');
+                        console.log(connectedNodes);
+                        
+                        console.log('getPositions()');
+                        console.log(network.getPositions('' + dataId));
                         */
                         el.stop().toggleClass('ecosystem-list__item--active');
                     }
