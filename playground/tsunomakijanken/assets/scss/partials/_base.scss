@@ -10,12 +10,15 @@ html, body
     overflow: hidden;
 }
 
-a:focus, 
-a:active,
+a:focus,
 button:focus,
+input:focus,
+textarea:focus
+a:active,
 button:active
 {
     outline: none;
+    outline-style: none;
     -moz-outline-style: none;
 }
 
