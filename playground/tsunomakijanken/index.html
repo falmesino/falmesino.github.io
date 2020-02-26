@@ -33,6 +33,7 @@
         
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.5.10/plyr.polyfilled.min.js"></script>
+        <script type="text/javascript" src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 
         <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
         <script type="text/javascript" src="./assets/js/main.js"></script>
@@ -49,8 +50,12 @@
 
     </head>
     <body>
+
+        <div class="loading">
+            <span>Loading&hellip;</span>
+        </div>
         
-        <div class="main">
+        <div class="main" id="#main">
 
             <div class="wj-scene wj-scene--intro active">
                 <div class="wj-scene__buttons">
@@ -78,14 +83,14 @@
                     <img id="watameScissor" class="" src="./assets/img/hand-scissor.png" alt="Scissor" title="Scissor">
                 </div><!--/ .wj-hands -->
 
-                <div class="wj-hands wj-hands--player">
+                <div class="wj-hands wj-hands--bottom wj-hands--player">
                     <button type="button" class="wj-hands__item wj-hands__item--rock" id="btnHandRock">Rock</button>
                     <button type="button" class="wj-hands__item wj-hands__item--paper" id="btnHandPaper">Paper</button>
                     <button type="button" class="wj-hands__item wj-hands__item--scissor" id="btnHandScissor">Scissor</button>
                 </div><!--/ .wj-hands -->
 
-                <div class="wj-scene__buttons">
-                    <button type="button" id="btnReplay" class="wj-button wj-button--primary d-none">
+                <div class="wj-scene__buttons d-none">
+                    <button type="button" id="btnReplay" class="wj-button wj-button--primary">
                         Play Again?
                     </button>
                 </div><!--/ .wj-scene__buttons -->
