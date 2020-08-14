@@ -3,6 +3,7 @@
  * Created by @falmesino
  */
 
+var debug = false;
 var userHand = '';
 var watameHand = '';
 var watameRandom = '';
@@ -76,10 +77,12 @@ function ctaScreen() {
 function getWatameHand() {
     let watameHands = ['Rock', 'Paper', 'Scissor'];
     let randomInt = Math.floor(Math.random() * watameHands.length);
-    console.log(randomInt);
-    console.table(watameHands);
     let output = watameHands[randomInt];
-    console.log('Watame choose : ' + output);
+    if(debug) {
+        console.log(randomInt);
+        console.table(watameHands);
+        console.log('Watame choose : ' + output);
+    }
     return output;
 }
 
@@ -164,7 +167,9 @@ function gameScreen() {
     $(document).on('click', '#btnTimer', function(e){
         e.preventDefault();
         let currentTime = videoPlayer.media.currentTime;
-        console.log(currentTime);
+        if(debug) {
+            console.log(currentTime);
+        }
         return false;
     });
 
@@ -208,13 +213,11 @@ function gameScreen() {
         }
 
         if(currentTime >= endTime) {
-            
             $('#btnReplay').parent().stop().fadeIn('fast', function(){
                 $(this).stop().removeClass('d-none');
             });
 
             videoPlayer.stop();
-
         }
 
     });
