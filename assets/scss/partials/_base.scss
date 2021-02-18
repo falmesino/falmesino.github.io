@@ -1,0 +1,130 @@
+html, body
+{
+    position: relative;
+    background-color: $color_black;
+    color: $color_white;
+
+    width: 100%;
+    height: 100%;
+
+    @include fontPrimary();
+    @include fontSize(16);
+    @include lineHeight(24);
+}
+
+.main
+{
+    border: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    position: relative;
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    height: 100%;
+
+    &__content
+    {
+        h1, h2, h3, h4, h5, h6, p
+        {
+            padding: 0 15px;
+        }
+
+        h1, h2, h3, h4, h5, h6
+        {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            margin: 0 auto;
+
+            @include fontHeading();
+            @include fontSize(48);
+            @include lineHeight(52);
+            text-transform: uppercase;
+            letter-spacing: 8px;
+
+            & + p
+            {
+                margin-top: 12px;
+            }
+        }
+
+    }
+}
+
+.social
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+
+    a
+    {
+        @include transition();
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        position: relative;
+        margin: 0;
+        padding: 0;
+
+        color: $color_white;
+        text-decoration: none;
+
+        width: 48px;
+        height: 48px;
+
+        &:hover,
+        &:focus
+        {
+            color: $color_white;
+            text-decoration: none;
+            opacity: 0.5;
+        }
+        
+    }
+}
+
+@media screen and (max-width: #{$breakpoint_max_sm})
+{
+    .main
+    {
+        &__content
+        {
+            h1, h2, h3, h4, h5, h6, p
+            {
+                text-align: left;
+            }
+
+        }
+    }
+
+    .social
+    {
+        padding: 15px;
+        justify-content: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: auto;
+    }
+}

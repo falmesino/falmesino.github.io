@@ -1,0 +1,17 @@
+/**
+ * Typography-related Mixins
+ */
+
+@mixin fontPrimary($font-weight: 300)
+{   
+    font-family: 'Poppins', sans-serif;
+    font-weight: $font-weight;
+    font-style: normal;
+}
+
+@mixin fontHeading($font-weight: 400)
+{
+    font-family: 'Krona One', sans-serif;
+    font-weight: $font-weight;
+    font-style: normal;
+}

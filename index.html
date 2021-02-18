@@ -1,18 +1,71 @@
----
-layout: default
----
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Falmesino</title>
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Krona+One&family=Poppins:wght@300&display=swap" /> 
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+  </head>
+  <body>
 
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
+    <div class="main">
+        <div class="main__content">
+            <h1>Hello, world!</h1>
+            <p>
+                My name is <strong>Falmesino</strong>.<br />
+                Jack of all trades, master of none.
+            </p>
+        </div>
+    </div>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
-</div>
+    <ul class="social">
+        <li>
+            <a href="https://www.youtube.com/c/Falmesino" target="_blank" title="YouTube">
+                <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.twitter.com/falmesino" target="_blank" title="Instagram">
+                <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.twitter.com/falmesino" target="_blank" title="Twitter">
+                <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+        </li>
+        <li>
+            <a href="https://www.reddit.com/user/falmesino" target="_blank" title="Reddit">
+                <ion-icon name="logo-reddit"></ion-icon>
+            </a>
+        </li>
+        <li>
+            <a href="https://tiktok.com/@falmesino" target="_blank" title="TikTok">
+                <ion-icon name="logo-tiktok"></ion-icon>
+            </a>
+        </li>
+        <li>
+            <a href="https://linkedin.com/in/falmesino" target="_blank" title="LinkedIn">
+                <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+        </li>
+        <li>
+            <a href="http://facebook.com/falmesino" target="_blank" title="Facebook">
+                <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+        </li>
+        <li>
+            <a href="https://twitch.tv/falmesino" target="_blank" title="Twitch">
+                <ion-icon name="logo-twitch"></ion-icon>
+            </a>
+        </li>
+    </ul>
+
+    <script type="text/javascript" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+  </body>
+</html>

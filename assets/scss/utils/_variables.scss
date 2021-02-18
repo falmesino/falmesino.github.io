@@ -1,0 +1,19 @@
+/**
+ * Responsive breakpoints
+ * https://getbootstrap.com/docs/4.5/layout/overview/
+ * 
+ * Small devices (landscape phones, 576px and up)
+ * Medium devices (tablets, 768px and up)
+ * Large devices (desktops, 992px and up)
+ * Extra large devices (large desktops, 1200px and up)
+ */
+
+$breakpoint_min_sm: 576px;
+$breakpoint_min_md: 768px;
+$breakpoint_min_lg: 992px;
+$breakpoint_min_xl: 1200px;
+
+$breakpoint_max_sm: 575px;
+$breakpoint_max_md: 767px;
+$breakpoint_max_lg: 991px;
+$breakpoint_max_xl: 1199px;
