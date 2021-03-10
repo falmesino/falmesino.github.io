@@ -1,0 +1,11 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Falmesino -- web developer -- @falmesino
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5, JavaScript
+    Apache Server Configs, jQuery, Modernizr, Normalize.css

@@ -1,0 +1,15 @@
+html, body
+{
+    @include fontHeading();
+    @include fontSize(16);
+    @include lineHeight(28);
+
+    background-color: $color_white;
+    color: $color_text;
+    position: relative;
+    overflow-x: hidden;
+}
+
+body
+{
+}

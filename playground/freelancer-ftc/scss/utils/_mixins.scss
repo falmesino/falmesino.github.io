@@ -1,0 +1,206 @@
+/**
+ * Transition
+ * 
+ * Usage
+ * @include transition_raw(color .3s ease);
+ */
+
+@mixin transition_raw($args...)
+{
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+}
+
+/**
+ * Transition
+ * 
+ * Usage
+ * @include transition(ease, 0.3s);
+ */
+
+@mixin transition($ease: ease, $duration: 0.3s)
+{
+    @include transition_raw(all $duration $ease);
+}
+
+/**
+ * Rem units
+ * Implementing CSS rem units with pixel fallback
+ * 
+ * Usage
+ * 
+ *  body
+ *  {
+ *      @include font-size(16);
+ *      @include line-height(28);
+ *  }
+ */
+
+@mixin fontSize($size, $base: 16)
+{
+    font-size: ($size + 'px'); // fallback for old browsers
+    font-size: ($size / $base) * 1rem;
+}
+
+@mixin lineHeight($size, $base: 16)
+{
+    line-height: $size + 'px'; // fallback for old browsers
+    line-height: ($size / $base) * 1rem;
+}
+
+/**
+ * Placeholder Color
+ */
+
+@mixin placeholderColor($color: #ddd)
+{
+    ::-webkit-input-placeholder 
+    {
+        color: $color;
+    }
+
+    ::-moz-placeholder
+    {
+        color: $color;
+    }
+
+    :-ms-input-placeholder
+    {
+        color: $color;
+    }
+
+    :-moz-placeholder 
+    {
+        color: $color;
+    }
+}
+
+/**
+ * (Bootstrap) Button variants
+ * Easily pump out default styles, as well as :hover, :focus, :active,
+ * and disabled options for all buttons
+ */
+
+@mixin button-variant($color, $background, $border, $switch: false)
+{
+    color: $color;
+    background-color: $background;
+    border-color: $border;
+    border: solid 1px $border;
+
+    @if $switch
+    {
+        &:focus,
+        &.focus
+        {
+            color: $background;
+            background-color: $color;
+            border-color: $background;
+        }
+    
+        &:hover
+        {
+            color: $background;
+            background-color: $color;
+            border-color: $background;
+        }
+    
+        &:active,
+        &.active,
+        .open > &.dropdown-toggle 
+        {
+            color: $background;
+            background-color: $color;
+            background-image: none;
+            border-color: $background;
+    
+            &:hover,
+            &:focus,
+            &.focus
+            {
+                color: $background;
+                background-color: $color;
+                border-color: $background;
+            }
+        }
+    }
+    @else
+    {
+
+        &:focus,
+        &.focus
+        {
+            color: $color;
+            background-color: darken($background, 10%);
+            border-color: darken($border, 25%);
+        }
+    
+        &:hover
+        {
+            color: $color;
+            background-color: darken($background, 10%);
+            border-color: darken($border, 12%);
+        }
+    
+        &:active,
+        &.active,
+        .open > &.dropdown-toggle 
+        {
+            color: $color;
+            background-color: darken($background, 10%);
+            background-image: none;
+            border-color: darken($border, 12%);
+    
+            &:hover,
+            &:focus,
+            &.focus
+            {
+                color: $color;
+                background-color: darken($background, 17%);
+                border-color: darken($border, 25%);
+            }
+        } 
+    }
+
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & 
+    {
+        &:hover,
+        &:focus,
+        &.focus 
+        {
+            background-color: $background;
+            border-color: $border;
+        }
+    }
+
+    .badge 
+    {
+        color: $background;
+        background-color: $color;
+    }
+}
+
+@mixin buttonVariant($color, $background, $border, $switch: false)
+{
+    @include button-variant($color, $background, $border, $switch);
+}
+  
+/**
+ * Button sizes
+ */
+
+@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
+    padding: $padding-vertical $padding-horizontal;
+    font-size: $font-size;
+    line-height: $line-height;
+    border-radius: $border-radius;
+}
+
+@mixin buttonSize($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
+    @include button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius);
+}

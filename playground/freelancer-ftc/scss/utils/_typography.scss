@@ -1,0 +1,11 @@
+@mixin fontPrimary($font_weight: 400)
+{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: $font_weight;
+}
+
+@mixin fontHeading($font_weight: 300)
+{
+    font-family: 'Lato', sans-serif;
+    font-weight: $font_weight;
+}
