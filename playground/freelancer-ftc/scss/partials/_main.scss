@@ -7,7 +7,21 @@
 
     &__content
     {
-        padding-top: 50vh;
+        display: block;
+        position: relative;
+        margin: 0;
+        padding: 0;
+
+        &--top
+        {
+            min-height: calc(100vh - 25vh);
+            padding-top: 25vh;
+        }
+
+        &--bottom
+        {
+            padding-top: 10vh;
+        }
     }
 
     img
@@ -22,7 +36,6 @@
         background-repeat: no-repeat;
         background-position: 0 0;
         background-size: 600px auto;
-        // background-attachment: fixed;
 
         padding-bottom: 400px;
 
@@ -42,8 +55,39 @@
             background-repeat: no-repeat;
             background-position: left bottom;
             background-size: 600px auto;
-            // background-attachment: fixed;
         }
+
+        &::after
+        {
+            content: "";
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+
+            margin: 0 0;
+            padding: 0;
+            width: 100%;
+            height: 320px;
+            background-image: url('../img/or-top-right.png');
+            background-repeat: no-repeat;
+            background-position: 100% -16px;
+            background-size: 640px auto;
+        }
+    }
+}
+
+@media (max-width: #{$breakpoint_max_xl})
+{
+    .main
+    {
+        .container
+        {
+            &::after
+            {
+                display: none;
+            }
+        } 
     }
 }
 
@@ -59,11 +103,13 @@
 
         &__content
         {
-            padding-top: 720px;
+            &--top
+            {
+                padding-top: 720px;
+            }
         }
     }
 }
-
 
 @media (max-width: #{$breakpoint_max_md})
 {
@@ -76,11 +122,13 @@
 
         &__content
         {
-            padding-top: 720px;
+            &--top
+            {
+                padding-top: 720px;
+            }
         }
     }
 }
-
 
 @media (max-width: #{$breakpoint_max_sm})
 {
@@ -93,7 +141,10 @@
 
         &__content
         {
-            padding-top: 70vh;
+            &--top
+            {
+                padding-top: 70vh;
+            }
         }
     }
 }
@@ -109,7 +160,27 @@
 
         &__content
         {
-            padding-top: calc(335px - 60px);
+            &--top
+            {
+                padding-top: calc(335px - 60px);
+            }
+        }
+    }
+}
+
+
+@media (max-width: #{$breakpoint_max_lg}) and (orientation: landscape)
+{
+    .main
+    {
+        &__content
+        {
+            padding-top: 0;
+
+            &--top
+            {
+                padding-top: 560px;
+            }
         }
     }
 }
