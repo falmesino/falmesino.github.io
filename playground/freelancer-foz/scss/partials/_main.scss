@@ -11,8 +11,8 @@
 
         img
         {
-            height: 100%;
-            width: auto;
+            height: auto; // 100%;
+            width: 100%; // auto;
         }
 
         @media (max-width: $breakpoint_max_lg)
