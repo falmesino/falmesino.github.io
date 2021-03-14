@@ -1,0 +1,153 @@
+.main
+{
+    position: relative;
+
+    &__graphic
+    {
+        position: relative;
+
+        height: calc(100vh - 160px);
+        margin-bottom: -240px;
+
+        img
+        {
+            height: 100%;
+            width: auto;
+        }
+
+        @media (max-width: $breakpoint_max_lg)
+        {
+            margin-bottom: 0;
+
+            img
+            {
+                width: 100%;
+                height: auto;
+            }
+
+        }
+
+        @media (max-width: $breakpoint_max_sm) and (orientation: portrait)
+        {
+            align-items: flex-start !important;
+            margin-bottom: 60px;
+
+            height: auto;
+
+            img
+            {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+    }
+
+    &-article
+    {
+        display: block;
+        position: relative;
+        margin: 60px 0 0;
+        padding: 0;
+
+        width: 100%;
+
+        &__title,
+        &__media,
+        &__body
+        {
+            display: block;
+            position: relative;
+            margin: 0 0 48px;
+            padding: 0;
+        }
+
+        &__title
+        {
+
+            h1, h2, h3, h4, h5, h6
+            {
+                @include fontPrimary(400);
+                @include fontSize(44);
+                @include lineHeight(52);
+
+                color: $color_blue;
+            }
+        }
+
+        &__media,
+        &__body
+        {
+            img
+            {
+                display: block;
+                margin: 0;
+                padding: 0;
+                border: none;
+
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        &__media
+        {
+            background-color: $color_blue;
+            color: $color_white;
+            
+            a
+            {
+                display: block;
+                position: relative;
+                overflow: hidden;
+
+                img
+                {
+                    @include transition();
+                }
+
+                &:hover,
+                &:focus
+                {
+                    img
+                    {
+                        transform: scale(1.1);
+                        opacity: 0.9;
+                    }
+                }
+            }
+        }
+
+        &__body
+        {
+            img
+            {
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    &-form
+    {
+        .form-control
+        {
+            @include transition();
+
+            &:focus
+            {
+                box-shadow: 0 0 0 transparent;
+                border-color: $color_blue;
+            }
+        }
+
+        .btn
+        {
+            @include transition();
+
+            &-primary
+            {
+                @include buttonVariant($color_white, $color_blue, $color_blue);
+            }
+        }
+    }
+}

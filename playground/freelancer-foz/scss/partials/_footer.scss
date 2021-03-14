@@ -1,0 +1,90 @@
+.footer
+{
+    position: relative;
+    min-height: 120px;
+    margin: 0;
+    padding: 120px 0 120px;
+
+    &__item
+    {
+        position: relative;
+
+        h1, h2, h3, h4, h5, h6
+        {
+            @include fontPrimary(700);
+            @include fontSize(20);
+            @include lineHeight(24);
+
+            color: $color_blue;
+
+            & + p
+            {
+                margin-top: 8px !important;
+            }
+        }
+
+        p
+        {
+            @include fontPrimary(400);
+            @include fontSize(14);
+            @include lineHeight(20);
+        }
+
+        a
+        {
+            color: inherit;
+            text-decoration: none;
+
+            &:hover,
+            &:focus,
+            &:active
+            {
+                color: $color_blue;
+                text-decoration: underline;
+            }
+        }
+
+        &--alt
+        {
+            h1, h2, h3, h4, h5, h6
+            {
+                color: $color_white;
+            }
+
+            a
+            {
+                color: $color_white;
+
+                &:hover,
+                &:focus,
+                &:active
+                {
+                    color: $color_white;
+                }
+            }
+        }
+    }
+
+    @media (max-width: $breakpoint_max_sm)
+    {
+
+        padding: 0 0 30px;
+
+        div[class^="col-"]
+        {
+            & + div[class^="col-"]
+            {
+                margin-top: 16px;
+
+                p
+                {
+                    text-align: left !important;
+                }
+            }
+        }
+    }
+    @media (max-width: $breakpoint_max_lg) and (orientation: landscape)
+    {
+        padding: 60px 0;
+    }
+}
