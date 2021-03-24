@@ -1,0 +1,17 @@
+.text
+{
+    &-primary
+    {
+        color: $color_blue !important;
+    }
+
+    &-pink
+    {
+        color: $color_pink !important;
+    }
+
+    &-success
+    {
+        color: $color_green !important;
+    }
+}

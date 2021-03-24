@@ -8,3 +8,22 @@ html, body
     color: $color_text;
     position: relative;
 }
+
+a
+{
+    color: $color_blue;
+
+    &:hover
+    {
+        color: $color_blue;
+    }
+}
+
+.pagination
+{
+    .page-link
+    {
+        @include transition();
+        color: $color_blue;
+    }
+}

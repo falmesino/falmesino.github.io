@@ -1,0 +1,204 @@
+.foz-card
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    position: relative;
+    margin: 0 0 30px;
+    padding: 20px;
+
+    height: 100%;
+
+    background-color: $color_blue;
+    color: $color_white;
+
+    &:hover,
+    &:focus,
+    &:active
+    {
+        color: $color_white;
+        text-decoration: none;
+    }
+
+    *
+    {
+        box-sizing: border-box;
+    }
+
+    a:not(.foz-card__icon)
+    {
+        @include transition();
+
+        color: inherit;
+        display: block;
+        text-decoration: none;
+
+        &:hover,
+        &:focus,
+        &:active
+        {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        &:hover
+        {
+            text-decoration: underline;
+        }
+    }
+
+    &--text-dark
+    {
+        color: $color_blue;
+
+        &:hover,
+        &:focus,
+        &:active
+        {
+            color: $color_blue;
+        }
+    }
+
+    &--text-black
+    {
+        color: $color_black;
+
+        &:hover,
+        &:focus,
+        &:active
+        {
+            color: $color_black;
+        }
+    }
+
+    &--green
+    {
+        background-color: $color_green;
+    }
+
+    &--pink
+    {
+        background-color: $color_pink;
+    }
+
+    &--grey
+    {
+        background-color: $color_grey;
+    }
+
+    &--black
+    {
+        background-color: $color_black;
+    }
+
+    &--rounded
+    {
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    
+    &__wrapper
+    {
+        & > div
+        {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__icon
+    {
+        @include transition();
+
+        display: flex !important;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        position: relative;
+        margin: 0 0 16px;
+        padding: 0;
+        width: 48px;
+        height: 48px;
+        border-radius: 100%;
+        border: none;
+        background-color: $color_white;
+        color: $color_blue;
+        text-decoration: none;
+        overflow: hidden;
+
+        img
+        {
+            display: block;
+            position: relative;
+            margin: 0 auto;
+            padding: 0;
+            border: none;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &[href]
+        {
+            &:hover
+            {
+                opacity: 0.8;
+                color: $color_blue;
+            }
+        }
+
+        &--black
+        {
+            color: $color_black;
+
+            &[href]
+            {
+                &:hover
+                {
+                    color: $color_black;
+                }
+            }
+        }
+    }
+
+    &__title
+    {
+        margin: 0 0 8px;
+        padding: 0;
+
+        font-weight: bold;
+        @include fontSize(20);
+        @include lineHeight(28);
+    }
+
+    &__text
+    {
+        margin: 0 0 15px;
+        padding: 0;
+        font-weight: 300;
+        @include fontSize(16);
+        @include lineHeight(28);
+
+        &--with-link
+        {
+            a
+            {
+                text-decoration: underline !important;
+
+                &:hover,
+                &:focus,
+                &:active
+                {
+                    text-decoration: none !important;
+                }
+            }
+        }
+
+        a
+        {
+            display: inline !important;
+        }
+    }
+}

@@ -1,0 +1,70 @@
+.foz-hero
+{
+    position: relative;
+    margin: 0;
+    padding: 30px;
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+
+    background-color: $color_grey_light;
+
+    &--no-border-radius
+    {
+        border-radius: 0 !important;
+    }
+
+    &--primary
+    {
+        background-color: $color_blue;
+        color: $color_white;
+    }
+
+    &--green
+    {
+        background-color: $color_green;
+        color: $color_blue;
+    }
+
+    &--pink
+    {
+        background-color: $color_pink;
+        color: $color_blue;
+    }
+
+    &--black,
+    &--dark
+    {
+        background-color: $color_black;
+        color: $color_white;
+    }
+
+    &--decorated
+    {
+        overflow: initial;
+
+        background-image: url('../img/ornament-big-pink-10.png');
+        background-repeat: no-repeat;
+        background-size: 150% auto;
+        background-position: 0 -10%;
+
+        &::before
+        {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: -32px;
+            right: 0;
+            margin: 0;
+            padding: 0;
+            border: none;
+            background-color: transparent;
+            background-repeat: no-repeat;
+            background-position: 90% bottom;
+            background-size: auto 30%;
+            background-image: url('../img/ornament-stripes-pink.png');
+            width: 50%;
+            height: 100%;
+        }
+    }
+}
