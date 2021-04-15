@@ -1,0 +1,208 @@
+// Variables
+
+$color_orange: #ed7c31;
+$color_green: #007f00;
+$color_green_dark: #004a46;
+$color_red: #fd0000;
+$color_white: #fff;
+
+$color_background: $color_green_dark;
+$color_text: $color_white;
+$color_button: $color_orange;
+
+// Stylin
+
+.fm-banner
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    position: relative;
+    background-color: $color_green_dark;
+    color: $color_text;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 28px;
+
+    margin: 0;
+    padding: 0 64px;
+
+    overflow: hidden;
+
+    &__branding
+    {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        position: absolute;
+        top: 0;
+        left: 16px;
+        z-index: 2;
+
+        max-width: calc(50% - 16px);
+
+        img
+        {
+            display: block;
+            position: relative;
+            margin: 0 auto;
+            padding: 0;
+            border: none;
+            
+            max-width: 100%;
+        }
+    }
+
+    &__image,
+    &__content
+    {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__image
+    {
+        align-self: flex-end;
+        position: relative;
+        margin: 0;
+        padding: 0;
+
+        img
+        {
+            display: block;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            max-width: 100%;
+            height: auto;
+
+            border: none;
+        }
+    }
+
+    &__content
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        position: relative;
+        margin: 0;
+        padding: 32px;
+
+        p
+        {
+            display: block;
+            margin: 0 0 28px;
+            padding: 0;
+            font-size: xx-large;
+            line-height: 125%;
+
+            & > span
+            {
+                background-color: $color_red;
+                padding: 0 8px;
+            }
+
+            &.font--italic
+            {
+                font-style: oblique !important;
+            }
+
+            &.font--bold
+            {
+                font-style: bold !important;
+            }
+        }
+    }
+
+    &__button
+    {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        text-align: center;
+        position: relative;
+        margin: 12px 0 0;
+        padding: 16px 28px;
+
+        background: $color_button;
+        border: none;
+        border-radius: 48px;
+
+        font-weight: bold;
+        font-size: xx-large;
+        color: $color_text;
+
+        cursor: pointer;
+
+        &:hover,
+        &:focus
+        {
+            background-color: darken($color_button, 5%);
+        }
+    }
+
+    &__page
+    {
+        min-width: 100%;
+        max-width: 100%;
+        width: 100%;
+        position: relative;
+
+        display: none;
+
+        &--active
+        {
+            display: block;
+        }
+
+        & > *
+        {
+            opacity: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 991px)
+{
+    .fm-banner
+    {
+        &__content
+        {
+            p
+            {
+                font-style: x-large;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px)
+{
+    .fm-banner
+    {
+        flex-direction: column;
+
+        &__image
+        {
+            order: 2;
+        }
+
+        &__content
+        {
+            order: 1;
+
+            padding: 72px 0;
+        }
+    }
+}

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HTML5 Banner (Hebrew) by @falmesino</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+  </head>
+  <body>
+    
+    <div class="fm-banner">
+        <a href="#" class="fm-banner__branding" title="Visit Our Website">
+            <img src="./img/brand.png" alt="Brand Name" />
+        </a><!--/ .fm-banner__branding -->
+        <div class="fm-banner__image">
+            <img src="./img/man.png" alt="Man" />
+        </div><!--/ .fm-banner__image -->
+        <div class="fm-banner__content">
+            <div class="fm-banner__page fm-banner__page--active">
+                <p class="font--italic">
+                    היי <span data-fm="name"></span>, אתה צריך קצת כסף במזומן?
+                </p>
+                <p class="">
+                    משיכת הכספים תגרום לך <span><span data-fm="amount">0</span></span>. לא חבל? 
+                </p>
+                <button class="fm-banner__button fm-banner__button--first" title="What do you offer?">
+                    מה אתה מציע ?
+                </button>
+            </div>
+            <div class="fm-banner__page">
+                <p class="">
+                    Get a personal loan of up to <span>$<span data-fm="loan">50,000</span></span>
+                </p>
+                <p class="">
+                    With an attractive <span><span data-fm="interest">3.1</span>% interest rate</span>
+                </p>
+                <p class="">
+                    <span>And save up to <span>$<span data-fm="save">3000</span> a year!</span>
+                </p>
+                <button class="fm-banner__button fm-banner__button--second" title="I'm Interested!">
+                    I'm Interested!
+                </button>
+            </div>
+        </div><!--/ .fm-banner__content -->
+    </div>
+
+    <script type="text/javascript">
+
+        /**
+         * Customizable Datas
+         */
+
+        const bannerDatas = {
+            'name': 'John Doe',
+            'amount': 0,
+            'loan': 0,
+            'interest': 0,
+            'save': 0
+        };
+
+        const elementDelay = 500;
+        const animatedClass = 'animate__animated';
+        const animationClass = 'animate__fadeInUp';
+
+        for(bannerData in bannerDatas) {
+            document.querySelector('span[data-fm="' + bannerData + '"]').innerHTML = '' + bannerDatas[bannerData];
+        }
+
+        document.querySelectorAll('.fm-banner__page:nth-of-type(1) > *').forEach(function(element, index) {
+            setTimeout(function(){
+                element.classList.add(animatedClass, animationClass);
+            }, (index * elementDelay));
+        });
+
+        document.querySelector('.fm-banner__button--first').addEventListener('click', function(e){
+            e.preventDefault();
+            
+            document.querySelector('.fm-banner__page--active').classList.remove('fm-banner__page--active');
+            
+            document.querySelector('.fm-banner__page:nth-of-type(2)').classList.add('fm-banner__page--active');
+
+            document.querySelectorAll('.fm-banner__page:nth-of-type(2) > *').forEach(function(element, index) {
+                setTimeout(function(){
+                    element.classList.add(animatedClass, animationClass);
+                }, (index * elementDelay));
+            });
+
+        }, false);
+
+        document.querySelector('.fm-banner__button--second').addEventListener('click', function(e){
+            e.preventDefault();
+            
+            alert('Do something here');
+
+        }, false);
+
+    </script>
+
+  </body>
+</html>
